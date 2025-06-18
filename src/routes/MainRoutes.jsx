@@ -12,7 +12,7 @@ const MainRoutes = () => {
        <Route path="/Cart" element={<Cart />} />
        <Route path="/Profile" element={<Profile />} />
     </Routes>
-  )
-}
+  );
+};
 
-export default MainRoutes
+export default MainRoutes;

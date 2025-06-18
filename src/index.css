@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'General Sans';
+  font-family: "General Sans";
 }
 
 html,
@@ -79,14 +79,13 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
-.userTypeDiv{
+.userTypeDiv {
   width: fit-content;
   display: flex;
   border: none;
   padding: 3px;
   border-radius: 12px;
   background-color: rgba(209, 203, 203, 0.815);
-
 }
 
 .userTypeBtn {
@@ -96,7 +95,7 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
-.form-select{
+.form-select {
   width: 80%;
   padding: 10px 12px;
   outline: none;
@@ -125,7 +124,6 @@ input {
   border-radius: 8px;
   background-color: white;
   border: 1px solid rgba(142, 147, 147, 0.557);
-
 }
 
 .form a {
@@ -141,5 +139,3 @@ input[type="submit"] {
   cursor: pointer;
   border: none;
 }
-
-

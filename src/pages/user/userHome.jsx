@@ -23,5 +23,3 @@ const userHome = () => {
     </div>
   )
 }
-
-export default userHome

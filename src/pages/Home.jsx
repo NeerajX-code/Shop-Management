@@ -1,17 +1,11 @@
-import { nanoid } from 'nanoid';
-import { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
-import axios from '../Utils/axios';
-import Login from '../components/login';
-import Register from '../components/Register';
+import { nanoid } from "nanoid";
+import { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 const Home = () => {
-    const [activeForm, setActiveForm] = useState('Register');
-   
-   
-  
-
+  const [activeForm, setActiveForm] = useState("Register");
 
     return (
         <div className='home' style={{ fontFamily: "Lexend" }}>
