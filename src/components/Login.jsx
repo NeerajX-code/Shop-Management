@@ -13,6 +13,7 @@ const Login = ({activeForm}) => {
     <>
                 {activeForm === 'Login' && (
                     <form onSubmit={handleSubmit(loginSubmit)} className='form login'>
+                      
 
                         <p>Email :</p>
                         <input {...register("emailL")} type="text" placeholder='Enter Your Email' />

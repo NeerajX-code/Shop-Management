@@ -23,7 +23,7 @@ const Home = () => {
                     <button className='log-reg-btn reg-btn' style={{ backgroundColor: `${activeForm === "Register" ? "rgb(245, 243, 243)" : "transparent"}` }} onClick={() => setActiveForm('Register')}>Register</button>
                 </div>
                 <Login activeForm={activeForm} />
-                <Register activeForm={activeForm} />
+                <Register activeForm={activeForm} setActiveForm={setActiveForm} />
             </section >
         </div>
 

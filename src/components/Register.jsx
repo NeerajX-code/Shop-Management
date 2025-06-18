@@ -1,9 +1,13 @@
 import { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { asyncRegisterUser } from '../store/actions/userActions';
+import { nanoid } from 'nanoid';
 
-const Register = ({activeForm}) => {
+const Register = ({activeForm,setActiveForm}) => {
       const [userType, setType] = useState('customer');
     const { register, reset, handleSubmit, unregister, formState: { errors } } = useForm();
+    let dispatch = useDispatch();
 
     useEffect(() => {
         if (userType !== "customer") unregister("shopId");
@@ -14,14 +18,13 @@ const Register = ({activeForm}) => {
         }
     }, [userType, unregister]);
 
-      const RegisterSubmit = async (data) => {
+      const RegisterSubmit = (data) => {
         try {
             userType == "owner" && (data.shopId = nanoid())
             data.role = userType;
             console.log(data)
-          let res =  await axios.post("/auth/register", data);
-          console.log(res)
-
+          let res = dispatch(asyncRegisterUser(data));
+          res && setActiveForm("Login")
         } catch (error) {
             console.log(error)
         }
