@@ -1,11 +1,11 @@
-import Home from './pages/Home'
-import MainRoutes from "./routes/MainRoutes"
+import Home from "./pages/Home";
+import MainRoutes from "./routes/MainRoutes";
 const App = () => {
   return (
-   <div className='app'>
-    <MainRoutes />
-   </div>
-  )
-}
+    <div className="app">
+      <MainRoutes />
+    </div>
+  );
+};
 
-export default App
+export default App;
