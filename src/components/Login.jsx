@@ -1,8 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router";
+import { asyncLoginUser } from "../store/actions/userActions";
 
 const Login = ({ activeForm }) => {
+  const dispatch = useDispatch();
   const {
     register,
     reset,
@@ -10,7 +13,7 @@ const Login = ({ activeForm }) => {
     formState: { errors },
   } = useForm();
   const loginSubmit = (data) => {
-    console.log(data);
+    dispatch(asyncLoginUser(data))
   };
 
   return (
@@ -20,13 +23,13 @@ const Login = ({ activeForm }) => {
             <form onSubmit={handleSubmit(loginSubmit)} className="form login">
               <p>Email :</p>
               <input
-                {...register("emailL")}
+                {...register("email")}
                 type="text"
                 placeholder="Enter Your Email"
               />
               <p>Password :</p>
               <input
-                {...register("passwordL")}
+                {...register("password")}
                 type="password"
                 placeholder="Enter Your password"
               />

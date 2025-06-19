@@ -15,6 +15,7 @@ const Register = ({activeForm,setActiveForm}) => {
     if (userType !== "owner") {
       unregister("shopName");
       unregister("shopType");
+      unregister("address")
     }
   }, [userType, unregister]);
 

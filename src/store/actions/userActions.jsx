@@ -1,12 +1,14 @@
 import axios from "../../Utils/axios";
+import { loaduser } from "../reducers/userSlice";
 
 
-export const asyncLoginUser = () => async (dispatch) => {
+export const asyncLoginUser = (user) => async (dispatch,getState) => {
     try {
-        let {data} =  await axios.get("/auth/login", user);
-        console.log(data);
+        let {data} =  await axios.post("/auth/login", user);
+        dispatch(loaduser(data));
+        console.log(data)
     } catch (error) {
-        
+        console.log(error);
     }
 }
 export const asyncRegisterUser = (user) => async () => {
