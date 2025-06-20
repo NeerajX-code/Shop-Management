@@ -9,6 +9,7 @@ import { asyncFetchUser } from "./store/actions/userActions";
 const App = () => {
   const [cookie] = useState(Cookies.get("token"));
   const dispatch = useDispatch();
+  
   useEffect(() => {
    if(cookie) console.log(cookie);
      dispatch(asyncFetchUser());

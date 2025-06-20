@@ -21,7 +21,7 @@ const OwnerHome = () => {
             </div>
             <div className='ownerId'>
                 <h2>Shop106</h2>
-                  <Files />
+                <Files />
             </div>
             <div className='ownerDashBoard'>
                 <div className='ownerTask'>
@@ -29,12 +29,14 @@ const OwnerHome = () => {
                     <div><p>Pickups</p></div>
                     <div><p>Visits</p></div>
                 </div>
-                    <RevenueChart />
+                <RevenueChart />
             </div>
             <div className='ownerProduct'>
-                <button style={{display:"flex",gap:"4px",alignItems:"center"}}><Cuboid />My Products</button>
+                <NavLink to=''>
+                    <button style={{ display: "flex", gap: "4px", alignItems: "center" }}><Cuboid />My Products</button>
+                </NavLink>
                 <NavLink to='/owner/Create-products'>
-                <button style={{display:"flex",gap:"4px",alignItems:"center"}}><PackagePlus />Create Products</button></NavLink>
+                    <button style={{ display: "flex", gap: "4px", alignItems: "center" }}><PackagePlus />Create Products</button></NavLink>
             </div>
             <div className='anouncement'>
                 <p>Anouncement Banner</p>
