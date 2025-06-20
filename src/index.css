@@ -12,12 +12,14 @@ body {
 }
 
 .app {
-  height: 100%;
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-image: url(https://images.unsplash.com/photo-1570483358100-6d222cdea6ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNreXxlbnwwfHwwfHx8MA%3D%3D);
-  backdrop-filter: opacity(1);
+  -webkit-backdrop-filter: opacity(1);
+          backdrop-filter: opacity(1);
   background-position: center;
   background-size: cover;
 }
@@ -30,7 +32,6 @@ body {
   align-items: center;
   justify-content: center;
   font-family: "Lexend";
-
   background-color: rgba(145, 138, 138, 0.372);
   /* Semi-transparent */
   backdrop-filter: blur(12px);
@@ -42,6 +43,7 @@ body {
 .sec-home {
   width: 80%;
   max-width: 400px;
+  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -64,6 +66,7 @@ body {
 }
 
 .log-reg-div {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   border: none;
@@ -79,7 +82,9 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
+
 .userTypeDiv {
+  width: -moz-fit-content;
   width: fit-content;
   display: flex;
   border: none;
@@ -95,6 +100,7 @@ body {
   border-radius: 8px;
   font-size: 1rem;
 }
+
 .form-select {
   width: 80%;
   padding: 10px 12px;
@@ -102,12 +108,13 @@ body {
   border-radius: 8px;
   background-color: white;
   border: 1px solid rgba(142, 147, 147, 0.557);
-
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 option {
+  width: -moz-fit-content;
   width: fit-content;
   background-color: rgba(152, 156, 151, 0.26);
 }
@@ -133,9 +140,163 @@ input {
   text-decoration: none;
 }
 
-input[type="submit"] {
+input[type=submit] {
   background-color: black;
   color: white;
   cursor: pointer;
   border: none;
 }
+
+.OwnerhomeforMob {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(232, 238, 238);
+}
+.OwnerhomeforMob .ownerHomeTop {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.OwnerhomeforMob .ownerHomeTop .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 1.2rem;
+}
+.OwnerhomeforMob .ownerHomeTop .circle img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.OwnerhomeforMob .ownerHomeTop button {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+}
+.OwnerhomeforMob .OwnerSearchBox {
+  width: 100%;
+  padding: 12px 12px;
+}
+.OwnerhomeforMob .OwnerSearchBox input {
+  width: 100%;
+  padding: 12px 12px;
+  outline: none;
+}
+.OwnerhomeforMob .ownerId {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 8px 12px;
+}
+.OwnerhomeforMob .ownerId h2 {
+  width: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 6px;
+  color: white;
+  background-color: rgb(28, 117, 89);
+  border-radius: 10px;
+  min-height: 45px;
+}
+.OwnerhomeforMob .ownerDashBoard {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding: 8px 12px;
+}
+.OwnerhomeforMob .ownerDashBoard .ownerTask {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+.OwnerhomeforMob .ownerDashBoard .ownerTask div {
+  width: 100%;
+  min-height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(98, 101, 101, 0.584);
+  color: black;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px;
+  border-radius: 10px;
+}
+.OwnerhomeforMob .ownerDashBoard .ownerTask div p {
+  text-transform: capitalize;
+  text-align: center;
+}
+.OwnerhomeforMob .ownerDashBoard .revenueChart {
+  width: 100%;
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 12px;
+}
+.OwnerhomeforMob .ownerProduct {
+  width: 100%;
+  display: flex;
+  padding: 8px;
+  gap: 8px;
+  justify-content: center;
+}
+.OwnerhomeforMob .ownerProduct button {
+  width: 100%;
+  min-height: 50px;
+  background-color: rgb(28, 117, 89);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 12px;
+  color: white;
+  font-size: 1rem;
+}
+.OwnerhomeforMob .anouncement {
+  width: 98%;
+  height: 14%;
+  display: flex;
+  margin: auto;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: rgb(28, 117, 89);
+}
+
+.ownerNavbar {
+  width: 100%;
+  display: flex;
+  background-color: rgb(240, 237, 237);
+  padding: 8px 12px;
+  border-top: 2px solid black;
+  gap: 8px;
+  justify-content: space-between;
+}
+.ownerNavbar a {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}
+.ownerNavbar button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: black;
+}/*# sourceMappingURL=index.css.map */

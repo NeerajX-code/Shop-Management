@@ -1,0 +1,16 @@
+.custom-card {
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+}
+
+.custom-card-header {
+  margin-bottom: 0.5rem;
+}
+
+.custom-card-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+}/*# sourceMappingURL=card.css.map */

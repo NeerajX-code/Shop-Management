@@ -1,0 +1,29 @@
+.create-product-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+.create-product-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.create-product-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.create-product-form .form-group input,
+.create-product-form .form-group textarea {
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  padding: 0.6rem 0.75rem;
+}
+.create-product-form .form-group .error {
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+.create-product-form button {
+  margin-top: 1rem;
+  width: 100%;
+}/*# sourceMappingURL=createProduct.css.map */

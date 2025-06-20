@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router";
 import { asyncLoginUser } from "../store/actions/userActions";
 
+
 const Login = ({ activeForm }) => {
   const dispatch = useDispatch();
   const {
@@ -30,7 +31,7 @@ const Login = ({ activeForm }) => {
               <p>Password :</p>
               <input
                 {...register("password")}
-                type="password"
+                type="text"
                 placeholder="Enter Your password"
               />
               <Link to="/">Forgot Password?</Link>

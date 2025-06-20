@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Login from "../components/Login";
 import Register from "../components/Register";
+import OwnerHomeForMobile from "./owner/OwnerHome";
+import OwnerNavbar from "../components/ownerComponents/OwnerNavbar";
 
 const Home = () => {
-  const [activeForm, setActiveForm] = useState("Register");
+    const [activeForm, setActiveForm] = useState("Register");
 
     return (
+        
         <div className='home' style={{ fontFamily: "Lexend" }}>
 
             <section className='sec-home'>
@@ -20,7 +23,6 @@ const Home = () => {
                 <Register activeForm={activeForm} setActiveForm={setActiveForm} />
             </section >
         </div>
-
     );
 };
 
