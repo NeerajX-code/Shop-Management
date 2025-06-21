@@ -1,11 +1,13 @@
 import Home from "./pages/Home";
+import UserHome from './pages/user/UserHome'
 import MainRoutes from "./routes/MainRoutes";
-const App = () => {
+function App() {
   return (
     <div className="app">
-      <MainRoutes />
+      <UserHome />
+      {/* <MainRoutes /> */}
     </div>
   );
-};
+}
 
 export default App;
