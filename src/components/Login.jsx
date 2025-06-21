@@ -1,8 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router";
+import { asyncLoginUser } from "../store/actions/userActions";
+
 
 const Login = ({ activeForm }) => {
+  const dispatch = useDispatch();
   const {
     register,
     reset,
@@ -10,26 +14,28 @@ const Login = ({ activeForm }) => {
     formState: { errors },
   } = useForm();
   const loginSubmit = (data) => {
-    console.log(data);
+    dispatch(asyncLoginUser(data))
   };
 
   return (
     <>
-      {activeForm === "Login" && (
-        <form onSubmit={handleSubmit(loginSubmit)} className="form login">
-          <p>Email :</p>
-          <input
-            {...register("emailL")}
-            type="text"
-            placeholder="Enter Your Email"
-          />
-          <p>Password :</p>
-          <input
-            {...register("passwordL")}
-            type="password"
-            placeholder="Enter Your password"
-          />
-          <Link to="/">Forgot Password?</Link>
+
+          {activeForm === "Login" && (
+            <form onSubmit={handleSubmit(loginSubmit)} className="form login">
+              <p>Email :</p>
+              <input
+                {...register("email")}
+                type="text"
+                placeholder="Enter Your Email"
+              />
+              <p>Password :</p>
+              <input
+                {...register("password")}
+                type="text"
+                placeholder="Enter Your password"
+              />
+              <Link to="/">Forgot Password?</Link>
+
 
           <input type="submit" value="Login" />
         </form>

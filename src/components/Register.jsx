@@ -15,6 +15,7 @@ const Register = ({activeForm,setActiveForm}) => {
     if (userType !== "owner") {
       unregister("shopName");
       unregister("shopType");
+      unregister("address")
     }
   }, [userType, unregister]);
 
@@ -101,7 +102,7 @@ const Register = ({activeForm,setActiveForm}) => {
               />
             )}
 
-            {userType === "sellsmen" && (
+            {userType === "salesman" && (
               <input
                 {...register("enterpriseName")}
                 type="text"
