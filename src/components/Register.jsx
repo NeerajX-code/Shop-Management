@@ -102,7 +102,7 @@ const Register = ({activeForm,setActiveForm}) => {
               />
             )}
 
-            {userType === "sellsmen" && (
+            {userType === "salesman" && (
               <input
                 {...register("enterpriseName")}
                 type="text"

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import OwnerNavbar from "./components/ownerComponents/OwnerNavbar";
+import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import MainRoutes from "./routes/MainRoutes";
 import Cookies from "js-cookie"
@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="app">
       <MainRoutes />
-    {cookie && <OwnerNavbar /> } 
+    {cookie && <Navbar /> } 
     </div>
   );
 };

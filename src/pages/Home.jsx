@@ -3,15 +3,19 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import Login from "../components/Login";
 import Register from "../components/Register";
-import OwnerHomeForMobile from "./owner/OwnerHome";
-import OwnerNavbar from "../components/ownerComponents/OwnerNavbar";
+import OwnerHome from "./owner/OwnerHome";
+import { useSelector } from "react-redux";
+import UserHome from "./user/userHome"
+
 
 const Home = () => {
+    const user = useSelector(state => state.userReducer.user)
     const [activeForm, setActiveForm] = useState("Register");
 
     return (
-        
-        <div className='home' style={{ fontFamily: "Lexend" }}>
+
+        <>
+        {!user && <div className='home' style={{ fontFamily: "Lexend" }}>
 
             <section className='sec-home'>
                 <h1>{activeForm}</h1>
@@ -22,7 +26,16 @@ const Home = () => {
                 <Login activeForm={activeForm} />
                 <Register activeForm={activeForm} setActiveForm={setActiveForm} />
             </section >
-        </div>
+        </div>}
+
+        {user && (
+            <>
+             {user?.role === "owner" && <OwnerHome />}
+             {user?.role === "customer" && <UserHome />}
+            </>
+        )}
+        
+        </>
     );
 };
 
