@@ -36,15 +36,14 @@ const Home = () => {
             </section >
         </div>}
 
-        {user && (
-            <>
-             {user?.role === "owner" && <OwnerHome />}
-             {user?.role === "customer" && <UserHome />}
-            </>
-        )}
-        
+      {user && (
+        <>
+          {user?.role === "owner" && <OwnerHome />}
+          {user?.role === "customer" && <UserHome />}
         </>
-    );
+      )}
+    </>
+  );
 };
 
 export default Home;

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
 import MainRoutes from "./routes/MainRoutes";
 import Cookies from "js-cookie"
 import { useDispatch, useSelector } from "react-redux";

@@ -1,21 +1,45 @@
-import { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink } from "react-router";
 
-import { House } from 'lucide-react';
-import { ShoppingCart } from 'lucide-react';
-import { ShoppingBag } from 'lucide-react';
-
-const OwnerNavbar = () => {
-  const [activeBtn, setActiveBtn] = useState("house");
-  
+const Footer = () => {
   return (
-    <div className='ownerNavbar'>
-      <NavLink onClick={() => setActiveBtn("house")} to='/' ><House /> {activeBtn == "house" && <h4>Home</h4>}</NavLink>
-      <NavLink onClick={() => setActiveBtn("products")} to="/products"><ShoppingBag />{activeBtn == "products" && <h4>Products</h4>}</NavLink>
-      <NavLink onClick={() => setActiveBtn("cart")} to="/cart"><ShoppingCart />{activeBtn == "cart" && <h4>Cart</h4>}</NavLink>
-      <button><i className='ri-menu-fold-line'></i></button>
-    </div>
-  )
-}
+    <div className="footer">
+      <NavLink to="/">
+        <lord-icon
+          src="https://cdn.lordicon.com/upjgggre.json"
+          trigger="morph"
+          state="morph-home-2"
+          style={{ width: "40px", height: "40px" }}
+        ></lord-icon>
+      </NavLink>
 
-export default OwnerNavbar
+      <NavLink to="/Products">
+        <lord-icon
+          src="https://cdn.lordicon.com/nvtfowkn.json"
+          trigger="hover"
+          colors="primary:#121331,secondary:#08a88a"
+          style={{ width: "40px", height: "40px" }}
+        ></lord-icon>
+      </NavLink>
+
+      <NavLink to="/Cart">
+        <lord-icon
+          src="https://cdn.lordicon.com/zmvzumis.json"
+          trigger="hover"
+          colors="primary:#121331,secondary:#08a88a"
+          style={{ width: "40px", height: "40px" }}
+        ></lord-icon>
+      </NavLink>
+
+      <NavLink to="/owner/profile">
+        <lord-icon
+          src="https://cdn.lordicon.com/bhfjfgqz.json"
+          trigger="hover"
+          colors="primary:#121331,secondary:#08a88a"
+          style={{ width: "40px", height: "40px" }}
+        ></lord-icon>
+      </NavLink>
+    </div>
+  );
+};
+
+export default Footer;
