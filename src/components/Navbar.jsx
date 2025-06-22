@@ -1,11 +1,13 @@
 import { useState } from 'react'
-import { NavLink } from 'react-router'
+import { NavLink } from 'react-router-dom'
+
 import { House } from 'lucide-react';
 import { ShoppingCart } from 'lucide-react';
 import { ShoppingBag } from 'lucide-react';
 
 const OwnerNavbar = () => {
   const [activeBtn, setActiveBtn] = useState("house");
+  
   return (
     <div className='ownerNavbar'>
       <NavLink onClick={() => setActiveBtn("house")} to='/' ><House /> {activeBtn == "house" && <h4>Home</h4>}</NavLink>

@@ -1,21 +1,29 @@
-import { nanoid } from "nanoid";
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import Login from "../components/Login";
 import Register from "../components/Register";
 import OwnerHome from "./owner/OwnerHome";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncUserProfile } from "../store/actions/userActions";
+import Cookies from "js-cookie"
 import UserHome from "./user/userHome"
 
 
 const Home = () => {
     const user = useSelector(state => state.userReducer.user)
     const [activeForm, setActiveForm] = useState("Register");
+    const dispatch = useDispatch();
+    useEffect(() => {
+        const token = Cookies.get("token");
+        if (token) {
+            dispatch(asyncUserProfile(token));
+        }
+    }, [dispatch]);
+    
 
     return (
 
         <>
-        {!user && <div className='home' style={{ fontFamily: "Lexend" }}>
+        { !user?.role && <div className='home' style={{ fontFamily: "Lexend" }}>
 
             <section className='sec-home'>
                 <h1>{activeForm}</h1>

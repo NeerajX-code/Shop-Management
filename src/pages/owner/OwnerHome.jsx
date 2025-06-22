@@ -3,14 +3,16 @@ import { Bell } from 'lucide-react';
 import { Files } from 'lucide-react';
 import RevenueChart from "../../components/RevenueChart.jsx"
 import { PackagePlus } from 'lucide-react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 
 const OwnerHome = () => {
+    const navigate = useNavigate();
+
     return (
         <div className='OwnerhomeforMob'>
             <div className='ownerHomeTop'>
-                <div className='circle'>
+                <div onClick={() => navigate("/owner/Profile")} className='circle'>
                     <img src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fHww" alt="" />
                 </div>
                 <h1>LOGO</h1>

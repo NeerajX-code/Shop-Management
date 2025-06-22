@@ -5,6 +5,10 @@
   font-family: "Lexend", sans-serif;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 html,
 body {
   height: 100%;
@@ -16,7 +20,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   background-image: url(https://images.unsplash.com/photo-1570483358100-6d222cdea6ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNreXxlbnwwfHwwfHx8MA%3D%3D);
   -webkit-backdrop-filter: opacity(1);
           backdrop-filter: opacity(1);
@@ -305,7 +308,6 @@ input[type=submit] {
   display: flex;
   background-color: rgb(240, 237, 237);
   padding: 8px 12px;
-  border-top: 1px solid black;
   gap: 8px;
   justify-content: space-between;
 }

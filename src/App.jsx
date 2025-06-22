@@ -3,23 +3,31 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import MainRoutes from "./routes/MainRoutes";
 import Cookies from "js-cookie"
-import { useDispatch } from "react-redux";
-import { asyncFetchUser } from "./store/actions/userActions";
+import { useDispatch, useSelector } from "react-redux";
+import { asyncUserProfile } from "./store/actions/userActions";
+
 
 const App = () => {
-  const [cookie] = useState(Cookies.get("token"));
+  const user = useSelector(state => state.userReducer.user);
   const dispatch = useDispatch();
-  
+  const token = Cookies.get("token");
+
   useEffect(() => {
-   if(cookie) console.log(cookie);
-     dispatch(asyncFetchUser());
+    if (token) {
+      dispatch(asyncUserProfile(token));
+    }
+  }, [user])
+
+  useEffect(() => {
+    if (token) {
+      dispatch(asyncUserProfile(token));
+    }
   }, []);
-  
-  
+
   return (
     <div className="app">
       <MainRoutes />
-    {cookie && <Navbar /> } 
+      {(user?.role === "owner" || user?.role === "customer") && <Navbar />}
     </div>
   );
 };

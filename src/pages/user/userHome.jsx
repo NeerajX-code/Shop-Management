@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router'
-import Footer from '../../components/Footer'
 
 const userHome = () => {
   return (
@@ -23,3 +22,5 @@ const userHome = () => {
     </div>
   )
 }
+
+export default userHome;

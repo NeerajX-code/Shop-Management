@@ -4,7 +4,6 @@ import OwnerProducts from "./owner/OwnerProducts"
 import UserProducts from "./user/UserProducts"
 const Products = () => {
   const user = useSelector(state => state.userReducer.user)
-  console.log(user)
   return (
     <>
       {user?.role === "owner" && <OwnerProducts />}
