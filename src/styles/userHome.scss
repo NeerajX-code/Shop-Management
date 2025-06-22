@@ -1,0 +1,148 @@
+.userHome {
+  width: 100%;
+  height: 92%;
+}
+
+.navBar {
+  width: 100%;
+  background-color: rgba(229, 228, 228, 0.977);
+  height: 9%;
+  display: flex;
+  padding: 8px 12px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 12px;
+  box-shadow: 0 0 4px rgba(38, 37, 37, 0.327);
+}
+
+.user-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+  img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+.fa-bell {
+  color: rgb(14, 13, 13);
+  font-size: 1.1rem;
+  border: 1px solid rgba(19, 18, 18, 0.279);
+  border-radius: 50%;
+  background-color: white;
+  padding: 9px;
+  box-shadow: 10px;
+}
+
+.main {
+  width: 100%;
+  height: 91%;
+  padding: 8px 1.2rem;
+  background-color: #41444817;
+  overflow: auto;
+  background-color: blanchedalmond;
+}
+
+.searchBar {
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.searchBar lord-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: rgb(9, 9, 9);
+  font-size: 20px;
+}
+
+.searchBar input {
+  width: 100%;
+  padding: 10px 12px 10px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  border: 1px solid rgba(48, 47, 47, 0.312);
+  box-shadow: 0 0 4px rgba(38, 37, 37, 0.327);
+  outline: none;
+}
+
+.searchBar input::placeholder {
+  font-weight: 300;
+  font-family: "helvetica";
+  padding-left: 8px;
+  font-size: 16px;
+}
+
+article.article-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  padding: 0px 16px;
+  min-height: 110px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(38, 37, 37, 0.327);
+}
+
+.article-one h3 {
+  font-size: 4.5vw;
+}
+
+.featured-product {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 16px;
+  min-height: 110px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(38, 37, 37, 0.327);
+}
+
+.featured-product h1 {
+  font-size: 4.5vw;
+}
+
+.announcements-banner {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0px 16px;
+  min-height: 110px;
+  overflow-y: auto;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 4px rgba(38, 37, 37, 0.327);
+}
+
+.announcements-banner h3 {
+  font-size: 4.5vw;
+}
+
+.footer {
+  height: 8%;
+  padding: 8px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0 0 6px rgba(38, 37, 37, 0.546);
+}
+
+.lord-icon {
+  background-color: red;
+}
