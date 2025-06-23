@@ -1,5 +1,6 @@
 import axios from "../../Utils/axios"
 import Cookies from "js-cookie"
+import { loadproducts } from "../reducers/productSlice";
 
 export const asyncCreateProduct = (product) => async (dispatch, getState) => {
   const token = Cookies.get("token");
@@ -19,4 +20,23 @@ export const asyncCreateProduct = (product) => async (dispatch, getState) => {
   } catch (error) {
     console.log(error)
   }
+}
+
+export const asyncGetOwnerProduct = (token) => async (dispatch) => {
+    try {
+      if(token){
+        const {data} = await axios.get("/products",{
+          headers:{
+            Authorization: `Bearer ${token}`
+          }
+        })
+        console.log(data.products);
+        dispatch(loadproducts(data.products));
+      } else {
+        return { error: "Token not provided" };
+      }
+    } catch (error) {
+      console.log(error);
+      return error?.response?.data || { error: "An error occurred" };
+    }
 }

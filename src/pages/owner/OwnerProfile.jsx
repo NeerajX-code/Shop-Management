@@ -179,7 +179,7 @@ const OwnerProfile = () => {
             </button>
             <button onClick={() => {
                 Cookies.remove("token");
-                dispatch(loaduser([]));
+                dispatch(loaduser(null));
                 navigate("/");
             }} className="logout">
                 Logout

@@ -5,6 +5,7 @@ import RevenueChart from "../../components/RevenueChart.jsx"
 import { PackagePlus } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import OwnerTop from '../../components/ownerComponents/OwnerTop.jsx';
 
 
 const OwnerHome = () => {
@@ -14,18 +15,7 @@ const OwnerHome = () => {
 
     return (
         <div className='OwnerhomeforMob'>
-            <div className='ownerHomeTop'>
-                <div onClick={() => navigate("/owner/Profile")} className='circle'>
-                    <img src={user?.profileImage ||
-                        "https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?ga=GA1.1.1792328450.1749652153&semt=ais_hybrid&w=740"
-                    } alt="" />
-                </div>
-                <h1>LOGO</h1>
-                <button><Bell /></button>
-            </div>
-            <div className='OwnerSearchBox'>
-                <input type="text" placeholder='Search Customer/Products Here' />
-            </div>
+           <OwnerTop user={user} />
             <div className='ownerId'>
                 <h2>{user?.shopId}</h2>
                 <Files />
@@ -39,7 +29,7 @@ const OwnerHome = () => {
                 <RevenueChart />
             </div>
             <div className='ownerProduct'>
-                <NavLink to=''>
+                <NavLink to='/owner/My-products'>
                     <button style={{ display: "flex", gap: "4px", alignItems: "center" }}><Cuboid />My Products</button>
                 </NavLink>
                 <NavLink to='/owner/Create-products'>

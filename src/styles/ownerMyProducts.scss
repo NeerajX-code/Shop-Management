@@ -1,0 +1,113 @@
+  /*
+    owner-products
+        ├── owner-products__search
+        │     ├── owner-products__search-input
+        │     └── owner-products__search-icon
+        └── owner-products__list
+                    ├── owner-products_category
+                    └── owner-products_div
+                                └── products-box
+                                            ├── info
+    */
+
+  .owner-products {
+      width: 100%;
+      height: 92%;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      font-family: "Lexend";
+
+      .owner-products__search {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          padding: 30px 10px;
+          background: linear-gradient(90deg, #232526 0%, #414345 100%);
+
+          .owner-products__search-input {
+              width: 100%;
+              padding: 15px 10px;
+              padding-left: 40px;
+              color: white;
+              background-color: rgba(150, 143, 143, 0.338);
+              backdrop-filter: blur(12px);
+          }
+
+          .searchIcon {
+              position: absolute;
+              top: 20.5%;
+              left: 10px;
+              z-index: 200;
+          }
+      }
+
+      .owner-products__list {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+
+          .owner-products_category {
+              width: 100%;
+              display: flex;
+              gap: 5px;
+              overflow: auto;
+              padding: 10px;
+
+              button {
+                  font-size: 1rem;
+                  padding: 8px 12px;
+                  border: none;
+                  line-height: 16px;
+                  border-radius: 12px;
+                  background-color: rgba(128, 128, 128, 0.167);
+              }
+          }
+
+          .owner-products_div {
+              width: fit-content;
+              height: 100%;
+              justify-content: center;
+              padding-bottom: 120px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 10px;
+              overflow: auto;
+
+              .products-box {
+                  width: 44%;
+                  height: 40%;
+                  max-width: 200px;
+                  padding: 15px;
+                  border-radius: 10px;
+                  background-color: #f5f6fa;
+
+                  img {
+                      width: 100%;
+                      aspect-ratio: 1/1;
+                      object-fit: cover;
+                      border-radius: 10px;
+                  }
+
+                  .info {
+                      height: 36%;
+                      display: flex;
+                      padding-top: 2px;
+                      flex-direction: column;
+                      justify-content: space-between;
+
+                      p {
+                          display: flex;
+                          gap: 2px;
+                          align-items: center;
+                      }
+                  }
+              }
+          }
+
+      }
+  }

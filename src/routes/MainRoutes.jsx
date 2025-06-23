@@ -6,6 +6,7 @@ import Profile from "../pages/Profile"
 import CreateProduct from '../pages/owner/createProducts'
 import AuthWrapper from '../Utils/AuthWrapper'
 import OwnerProfile from '../pages/owner/OwnerProfile'
+import MyProducts from '../pages/owner/MyProducts'
 
 
 const MainRoutes = () => {
@@ -23,6 +24,7 @@ const MainRoutes = () => {
       <Route path="/Profile" element={<AuthWrapper><Profile /></AuthWrapper>} />
       <Route path='/owner/Create-products' element={<AuthWrapper><CreateProduct /></AuthWrapper>} />
       <Route path='/owner/Profile' element={<AuthWrapper><OwnerProfile /></AuthWrapper>} />
+      <Route path='/owner/My-products' element={<MyProducts />} />
     </Routes>
   );
 };
