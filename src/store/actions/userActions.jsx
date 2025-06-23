@@ -39,19 +39,3 @@ export const asyncUserProfile = (token) => async (dispatch) => {
         console.log(error);
     }
 }
-
-// // Example using fetch
-// const res = await fetch("https://your-backend.com/auth/login", {
-//   method: "POST",
-//   headers: {
-//     "Content-Type": "application/json"
-//   },
-//   body: JSON.stringify({
-//     email: "user@example.com",
-//     password: "password123",
-//     role: "customer" // or "owner" / "salesman"
-//   })
-// });
-
-// const data = await res.json();
-// const token = data.token; // ← Your JWT token

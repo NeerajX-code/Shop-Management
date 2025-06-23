@@ -4,16 +4,21 @@ import { Files } from 'lucide-react';
 import RevenueChart from "../../components/RevenueChart.jsx"
 import { PackagePlus } from 'lucide-react';
 import { NavLink, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 const OwnerHome = () => {
     const navigate = useNavigate();
+    const user = useSelector(state => state.userReducer.user);
+
 
     return (
         <div className='OwnerhomeforMob'>
             <div className='ownerHomeTop'>
                 <div onClick={() => navigate("/owner/Profile")} className='circle'>
-                    <img src="https://plus.unsplash.com/premium_photo-1689977968861-9c91dbb16049?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fHww" alt="" />
+                    <img src={user?.profileImage ||
+                        "https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?ga=GA1.1.1792328450.1749652153&semt=ais_hybrid&w=740"
+                    } alt="" />
                 </div>
                 <h1>LOGO</h1>
                 <button><Bell /></button>
@@ -22,7 +27,7 @@ const OwnerHome = () => {
                 <input type="text" placeholder='Search Customer/Products Here' />
             </div>
             <div className='ownerId'>
-                <h2>Shop106</h2>
+                <h2>{user?.shopId}</h2>
                 <Files />
             </div>
             <div className='ownerDashBoard'>

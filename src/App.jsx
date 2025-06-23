@@ -15,13 +15,7 @@ const App = () => {
     if (token) {
       dispatch(asyncUserProfile(token));
     }
-  }, [user])
-
-  useEffect(() => {
-    if (token) {
-      dispatch(asyncUserProfile(token));
-    }
-  }, []);
+  }, [token, dispatch]);
 
   return (
     <div className="app">

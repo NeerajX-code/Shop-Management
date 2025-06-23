@@ -6,8 +6,9 @@ import { useForm } from "react-hook-form";
 import axios from "../../Utils/axios";
 import Cookies from "js-cookie";
 import { asyncUserProfile } from "../../store/actions/userActions";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { loaduser } from "../../store/reducers/userSlice";
+import Loading from "../../components/Loading";
 
 
 const OwnerProfile = () => {
@@ -15,6 +16,7 @@ const OwnerProfile = () => {
     const user = useSelector(state => state.userReducer.user)
     const [isAcitve, setActive] = useState(false)
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
+    const [loading, setLoading] = useState(true);
     const token = Cookies.get("token");
     const navigate = useNavigate();
     const SubmitHandler = async (data) => {
@@ -48,11 +50,16 @@ const OwnerProfile = () => {
         }
     }
 
+    if (loading) <Loading />
+
     useEffect(() => {
-        dispatch(asyncUserProfile(token));
-    }, [user, reset])
-    useEffect(() => {
-        dispatch(asyncUserProfile(token));
+        const token = Cookies.get("token");
+        if (token) {
+            dispatch(asyncUserProfile(token)).finally(() => setLoading(false));
+        } else {
+            dispatch(loaduser(null))
+            setLoading(false);
+        }
     }, [])
 
 
@@ -171,9 +178,9 @@ const OwnerProfile = () => {
                 Change Password
             </button>
             <button onClick={() => {
-                Cookies.remove("token")
-                dispatch(loaduser(null))
-                window.location.replace("/");
+                Cookies.remove("token");
+                dispatch(loaduser([]));
+                navigate("/");
             }} className="logout">
                 Logout
             </button>

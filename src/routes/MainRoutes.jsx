@@ -22,7 +22,7 @@ const MainRoutes = () => {
       <Route path="/Cart" element={<AuthWrapper><Cart /></AuthWrapper>} />
       <Route path="/Profile" element={<AuthWrapper><Profile /></AuthWrapper>} />
       <Route path='/owner/Create-products' element={<AuthWrapper><CreateProduct /></AuthWrapper>} />
-      <Route path='/owner/Profile' element={<OwnerProfile />} />
+      <Route path='/owner/Profile' element={<AuthWrapper><OwnerProfile /></AuthWrapper>} />
     </Routes>
   );
 };
