@@ -20,7 +20,7 @@ const App = () => {
   return (
     <div className="app">
       <MainRoutes />
-      {(user?.role === "owner" || user?.role === "customer") && <Navbar />}
+      {(user?.role === "owner" || user?.role === "customer") && <Navbar token={token} />}
     </div>
   );
 };

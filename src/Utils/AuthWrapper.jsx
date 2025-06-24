@@ -20,7 +20,7 @@ const AuthWrapper = ({ children }) => {
     }, [token]);
 
 
-    return user !== null ? <>{children}</> : <Navigate to="/" replace />;
+    return user !== null ? <>{children && typeof children === 'function' ? children(token) : children}</> : <Navigate to="/" replace />;
 }
 
 export default AuthWrapper

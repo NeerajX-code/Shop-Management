@@ -11,7 +11,7 @@ const OwnerTop = ({user}) => {
                     } alt="" />
                 </div>
                 <h1>LOGO</h1>
-                <button><Bell /></button>
+                <button><Bell fill='white' stroke='white' /></button>
             </div>
             <div className='OwnerSearchBox'>
                 <input type="text" placeholder='Search Customer/Products Here' />

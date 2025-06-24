@@ -1,6 +1,6 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({token}) => {
   return (
     <div className="footer">
       <NavLink to="/">
@@ -8,24 +8,25 @@ const Footer = () => {
           src="https://cdn.lordicon.com/upjgggre.json"
           trigger="morph"
           state="morph-home-2"
+          colors="primary:#ffffff"
           style={{ width: "40px", height: "40px" }}
         ></lord-icon>
       </NavLink>
 
-      <NavLink to="/Products">
+      <NavLink to={`/owner/products/${token}`}>
         <lord-icon
           src="https://cdn.lordicon.com/nvtfowkn.json"
           trigger="hover"
-          colors="primary:#121331,secondary:#08a88a"
+          colors="primary:#ffffff"
           style={{ width: "40px", height: "40px" }}
         ></lord-icon>
       </NavLink>
 
-      <NavLink to="/Cart">
+      <NavLink to={`/owner/cart/${token}`} >
         <lord-icon
           src="https://cdn.lordicon.com/zmvzumis.json"
           trigger="hover"
-          colors="primary:#121331,secondary:#08a88a"
+           colors="primary:#ffffff"
           style={{ width: "40px", height: "40px" }}
         ></lord-icon>
       </NavLink>
@@ -34,7 +35,7 @@ const Footer = () => {
         <lord-icon
           src="https://cdn.lordicon.com/bhfjfgqz.json"
           trigger="hover"
-          colors="primary:#121331,secondary:#08a88a"
+           colors="primary:#ffffff"
           style={{ width: "40px", height: "40px" }}
         ></lord-icon>
       </NavLink>

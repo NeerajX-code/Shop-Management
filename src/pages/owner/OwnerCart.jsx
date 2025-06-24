@@ -1,8 +1,9 @@
-import React from 'react'
+import "../../styles/ownerCart.css"
 
-const OwnerCart = () => {
+const OwnerCart = ({token}) => {
+  console.log(token)
   return (
-    <div>OwnerCart</div>
+    <div className="OwnerCart">OwnerCart</div>
   )
 }
 

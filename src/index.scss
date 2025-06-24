@@ -5,7 +5,7 @@
   font-family: "Lexend", sans-serif;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -15,20 +15,24 @@ body {
   width: 100%;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 
 .app {
   width: 100%;
   height: 100dvh;
-   display: flex;
-   overflow: hidden;
+  display: flex;
+  overflow: hidden;
   flex-direction: column;
   background-image: url(https://images.unsplash.com/photo-1570483358100-6d222cdea6ff?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHNreXxlbnwwfHwwfHx8MA%3D%3D);
   backdrop-filter: opacity(1);
   background-position: center;
   background-size: cover;
+
+  .footer {
+    background: linear-gradient(135deg, #303334 0%, #414345 100%);
+  }
 }
 
 .home {
@@ -162,7 +166,8 @@ input[type="submit"] {
   height: 100%;
   padding-bottom: 10px;
   overflow-y: scroll;
-  background: linear-gradient(to bottom right, #f0f4f8, #e6f0ec);
+  color: white;
+  background: linear-gradient(90deg, #292b2c 0%, #313334 100%);
 
   .ownerHomeTop {
     width: 100%;
@@ -179,11 +184,9 @@ input[type="submit"] {
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background-color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       overflow: hidden;
 
       img {
@@ -354,4 +357,5 @@ input[type="submit"] {
     border: none;
     color: black;
   }
+
 }

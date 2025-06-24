@@ -1,8 +1,9 @@
 import React from 'react'
+import "../../styles/ownerProducts.css"
 
 const OwnerProducts = () => {
   return (
-    <div>OwnerProducts</div>
+    <div className='OwnerProducts'>OwnerProducts</div>
   )
 }
 

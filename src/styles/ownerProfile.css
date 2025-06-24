@@ -8,6 +8,7 @@
   gap: 1rem;
   -webkit-backdrop-filter: blur(12px);
           backdrop-filter: blur(12px);
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
 }
 .ownerProfile .img {
   width: 100%;
@@ -36,7 +37,7 @@
   display: flex;
   align-items: center;
   font-size: 14px;
-  color: black;
+  color: white;
   top: -8%;
   right: 6%;
   position: absolute;

@@ -7,6 +7,7 @@
     justify-content: center;
     gap: 1rem;
     backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
 
 
     .img {
@@ -37,7 +38,7 @@
             display: flex;
             align-items: center;
             font-size: 14px;
-            color: black;
+            color: white;
             top: -8%;
             right: 6%;
             position: absolute;
@@ -73,7 +74,7 @@
                 background-color: rgba(35, 33, 33, 0.479);
             }
 
-           .input{
+            .input {
                 outline: none;
                 color: rgb(15, 13, 13);
                 background-color: rgba(177, 180, 176, 0.696);

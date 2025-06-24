@@ -18,7 +18,7 @@ const OwnerHome = () => {
            <OwnerTop user={user} />
             <div className='ownerId'>
                 <h2>{user?.shopId}</h2>
-                <Files />
+                <Files stroke='white' />
             </div>
             <div className='ownerDashBoard'>
                 <div className='ownerTask'>

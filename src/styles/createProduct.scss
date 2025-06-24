@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(9, 187, 142);
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
 
   .create-product-form{
     width: 95%;
@@ -16,8 +16,7 @@
     align-items: center;
     padding: 15px;
     border-radius: 12px;
-    color: white;
-    background-color: black;
+    color: #fff;
     gap: 8px;
 
     .form-group{
@@ -25,13 +24,16 @@
     }
     input{
       width: 100%;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.345);
       border-radius: 10px;
     }
     input[type="file"]{
-      color: black;
+      color: white;
     }
     input[type="submit"]{
       width: fit-content;
+      margin-top: 10px;
       background-color: white;
       color: black;
     }

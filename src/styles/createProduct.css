@@ -4,7 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(9, 187, 142);
+  background: linear-gradient(135deg, #232526 0%, #414345 100%);
 }
 .create-product .create-product-form {
   width: 95%;
@@ -15,8 +15,7 @@
   align-items: center;
   padding: 15px;
   border-radius: 12px;
-  color: white;
-  background-color: black;
+  color: #fff;
   gap: 8px;
 }
 .create-product .create-product-form .form-group {
@@ -24,14 +23,17 @@
 }
 .create-product .create-product-form input {
   width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.345);
   border-radius: 10px;
 }
 .create-product .create-product-form input[type=file] {
-  color: black;
+  color: white;
 }
 .create-product .create-product-form input[type=submit] {
   width: -moz-fit-content;
   width: fit-content;
+  margin-top: 10px;
   background-color: white;
   color: black;
 }/*# sourceMappingURL=createProduct.css.map */
