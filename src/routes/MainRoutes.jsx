@@ -9,6 +9,7 @@ import OwnerProfile from '../pages/owner/OwnerProfile'
 import MyProducts from '../pages/owner/MyProducts'
 import OwnerProducts from '../pages/owner/OwnerProducts'
 import OwnerCart from '../pages/owner/OwnerCart'
+import ProductDetails from '../pages/ProductDetails'
 
 
 const MainRoutes = () => {
@@ -29,6 +30,7 @@ const MainRoutes = () => {
       <Route path='/owner/My-products' element={<MyProducts />} />
       <Route path='/owner/products/:token' element={<AuthWrapper><OwnerProducts /></AuthWrapper>} />
       <Route path='/owner/cart/:token' element={<AuthWrapper><OwnerCart /></AuthWrapper>} />
+      <Route path='/product/details/:id' element={<AuthWrapper><ProductDetails /></AuthWrapper>} />
     </Routes>
   );
 };

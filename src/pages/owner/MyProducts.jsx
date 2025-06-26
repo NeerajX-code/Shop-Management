@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Loading from '../../components/Loading';
 import { IndianRupee } from 'lucide-react';
+import { NavLink } from 'react-router';
 
 const MyProducts = () => {
     const products = useSelector(state => state.productReducer.products);;
@@ -29,14 +30,16 @@ const MyProducts = () => {
     console.log(products)
 
     const renderProducts = products.map((product) => (
-        <div key={product?._id} className="products-box">
-            <img src={product?.image} alt={product?.title} />
-            <div className="info">
-                <p>{product?.title}</p>
-                <p>Price: <span><IndianRupee size={12} />{product?.price}</span></p>
-                <p>DisCount: <span><IndianRupee size={12} />{product?.discount}</span></p>
+        <NavLink to={`/product/details/${product._id}`} key={product?._id} >
+            <div  className="products-box">
+                <img src={product?.image} alt={product?.title} />
+                <div className="info">
+                    <p>{product?.title}</p>
+                    <p>Price: <span><IndianRupee size={12} />{product?.price}</span></p>
+                    <p>DisCount: <span><IndianRupee size={12} />{product?.discount}</span></p>
+                </div>
             </div>
-        </div>
+        </NavLink>
     ));
     return (
         <div className='owner-products'>
@@ -51,7 +54,7 @@ const MyProducts = () => {
                         placeholder='Search All Of Your Products'
                     />
                 </div>
-                <Filter fill='white' size={30} className="owner-products__search-icon" />
+                <Filter fill='white' stroke='none' size={30} className="owner-products__search-icon" />
             </div>
             <div className="owner-products__list">
                 <div className="owner-products_category">
